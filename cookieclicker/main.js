@@ -7,10 +7,11 @@
 //setInterval(() => document.querySelector('#bigCookie'));
 setInterval(() => {
     Game.cookies = Infinity;
-    const crate = Array.from(document.querySelectorAll('.crate.upgrade.enable')).slice(-1)[0].click();
-    if (crate) {
-        crate.click();
-    }
-    Array.from(document.querySelectorAll('.product.enable')).slice(-1)[0].click();
+    const crate = Array.from(document.querySelectorAll('.crate.upgrade.enabled')).slice(-1)[0];
+    if (crate)  crate.click();
+    
+    const prouct = Array.from(document.querySelectorAll('.product.enabled')).slice(-1)[0];
+    if (prouct) prouct.click();
+    
     document.querySelector('#bigCookie').click();
 });
